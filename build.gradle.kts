@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.cuiwang"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -34,12 +34,11 @@ intellijPlatform {
         }
 
         changeNotes = """
-            <h3>1.0.0</h3>
+            <h3>1.0.1</h3>
             <ul>
-              <li>Initial release of Code Template plugin.</li>
-              <li>Support creating template from editor selection.</li>
-              <li>Support right-click insert menu and quick insert popup.</li>
-              <li>Support template management and JSON import/export in Settings.</li>
+              <li>Fixed Settings table editor losing focus while typing.</li>
+              <li>Improved context menu icon compatibility and visibility fallback.</li>
+              <li>Updated plugin descriptor description to satisfy Marketplace validation rules.</li>
             </ul>
         """.trimIndent()
     }
