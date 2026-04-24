@@ -1,0 +1,53 @@
+<idea-plugin>
+    <id>com.cuiwang.CodeTemplatePlugin</id>
+    <name>Code Template</name>
+    <vendor url="https://github.com/cuiwang">崔 旺</vendor>
+
+    <description><![CDATA[
+        Code Template helps you quickly create, manage, and insert reusable code snippets in JetBrains IDEs.
+        It provides right-click actions, quick insert shortcuts, and JSON import/export from Settings.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable
+                id="com.cuiwang.codetemplate.settings"
+                displayName="Code Template"
+                parentId="other"
+                instance="com.cuiwang.codetemplate.settings.CodeTemplateConfigurable"/>
+
+        <postStartupActivity implementation="com.cuiwang.codetemplate.startup.CodeTemplateStartupActivity"/>
+    </extensions>
+
+    <actions>
+        <group id="com.cuiwang.codetemplate.group.Context"
+               class="com.cuiwang.codetemplate.actions.CodeTemplateContextActionGroup"
+               text="Code Template"
+               popup="true"
+               icon="/icons/codeTemplateMenu.svg">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+
+            <group id="com.cuiwang.codetemplate.group.Insert"
+                   class="com.cuiwang.codetemplate.actions.InsertTemplatesActionGroup"
+                   text="Insert"
+                   popup="true"
+                   icon="/icons/codeTemplateMenu.svg"/>
+
+            <action id="com.cuiwang.codetemplate.action.CreateFromSelection"
+                    class="com.cuiwang.codetemplate.actions.CreateTemplateFromSelectionAction"
+                    text="Create"
+                    icon="/icons/codeTemplateMenu.svg"/>
+        </group>
+
+        <action id="com.cuiwang.codetemplate.action.OpenInsertPopup"
+                class="com.cuiwang.codetemplate.actions.OpenInsertPopupAction"
+                text="Insert Code Template"
+                description="打开代码模板插入菜单"
+                icon="/icons/codeTemplateMenu.svg">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl I"/>
+            <keyboard-shortcut keymap="Mac OS X" first-keystroke="meta I"/>
+            <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="meta I"/>
+        </action>
+    </actions>
+</idea-plugin>
