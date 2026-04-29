@@ -6,10 +6,10 @@ import com.cuiwang.codetemplate.state.CodeTemplateSettingsService
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.project.DumbAware
 import com.intellij.openapi.project.Project
-import com.intellij.openapi.startup.StartupActivity
+import com.intellij.openapi.startup.ProjectActivity
 
-class CodeTemplateStartupActivity : StartupActivity, DumbAware {
-    override fun runActivity(project: Project) {
+class CodeTemplateStartupActivity : ProjectActivity, DumbAware {
+    override suspend fun execute(project: Project) {
         val shortcut = CodeTemplateSettingsService.getInstance().getQuickInsertShortcut()
         ShortcutManager.applyShortcut(shortcut)
 

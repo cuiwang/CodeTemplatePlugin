@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.cuiwang"
-version = "1.0.1"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -34,11 +34,10 @@ intellijPlatform {
         }
 
         changeNotes = """
-            <h3>1.0.1</h3>
+            <h3>1.0.2</h3>
             <ul>
-              <li>Fixed Settings table editor losing focus while typing.</li>
-              <li>Improved context menu icon compatibility and visibility fallback.</li>
-              <li>Updated plugin descriptor description to satisfy Marketplace validation rules.</li>
+              <li>Prepared for Marketplace 1.0.2 release.</li>
+              <li>Minor fixes and UX tweaks.</li>
             </ul>
         """.trimIndent()
     }
