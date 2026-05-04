@@ -1,49 +1,38 @@
-# Code Template
+# Code Template 插件
 
-Code Template 是一个 JetBrains IDE 插件，用于快速创建、管理并插入可复用代码块。
+Code Template 是一个用于 JetBrains 平台（IntelliJ IDEA、PyCharm 等）的轻量插件，帮助你快速保存、管理并插入可重用的代码片段。
 
-- 作者：崔 旺
-- 主页：https://github.com/cuiwang
-- 插件仓库：https://github.com/cuiwang/CodeTemplatePlugin
+作者：崔旺  
+仓库：[https://github.com/cuiwang/CodeTemplatePlugin](https://github.com/cuiwang/CodeTemplatePlugin)
 
-## 功能特性
+主要功能
 
-- 编辑器右键菜单 `Code Template`
-  - `Create`：将当前选中代码保存为模板
-  - `Insert`：从模板列表插入代码到当前光标位置
-- 快捷键快速插入
-  - 默认 `Ctrl+I`（macOS 默认 `Cmd+I`）
-  - 支持数字键快速选择、方向键选择、回车插入
-- 设置页管理模板
-  - 路径：`Settings > Other Settings > Code Template`
-  - 支持新增/删除/上移/下移
-  - 支持启用状态开关
-  - 支持 JSON 导入/导出
+- 在编辑器右键菜单中快速访问 `Code Template`（支持 Create / Insert 等操作）
+- 快捷键快速插入模板（可自定义）
+- 插件设置页：Settings > Other Settings > Code Template，用于管理模板列表、导入/导出 JSON 等
 
-## 使用方式
+快速构建与打包
 
-1. 在编辑器中选中代码。
-2. 右键选择 `Code Template > Create`，输入模板名称并保存。
-3. 在需要插入处使用：
-   - 右键 `Code Template > Insert`，或
-   - 快捷键呼出 `Insert Code Template`。
+- 本地构建：
 
-## 构建
+  ```bash
+  ./gradlew build
+  ```
 
-```bash
-./gradlew build
-```
+- 打包插件：
 
-## 打包插件
+  ```bash
+  ./gradlew buildPlugin
+  ```
 
-```bash
-./gradlew buildPlugin
-```
+- 生成的插件包位于：`build/distributions/`
 
-生成的插件包位于：
+发布到 JetBrains Marketplace
 
-- `build/distributions/`
+- 请参阅仓库中的 `MARKETPLACE_UPLOAD.md`（若已删除，请使用 JetBrains 官方文档填写 Marketplace 上传信息）。
 
-## 发布到 JetBrains Marketplace
+联系方式
 
-请查看 [MARKETPLACE_UPLOAD.md](./MARKETPLACE_UPLOAD.md)。
+- GitHub: [https://github.com/cuiwang](https://github.com/cuiwang)
+
+<!-- 仅保留发布所需的最小信息，详尽开发文档请放在 docs/ 或仓库的其他开发分支 -->
