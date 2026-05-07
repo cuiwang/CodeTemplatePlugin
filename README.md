@@ -30,6 +30,7 @@ Code Template 是一个用于 JetBrains 平台（IntelliJ IDEA、PyCharm 等）�
 发布到 JetBrains Marketplace
 
 - 请参阅仓库中的 `MARKETPLACE_UPLOAD.md`（若已删除，请使用 JetBrains 官方文档填写 Marketplace 上传信息）。
+- 发布变更记录请查看 `CHANGELOG.md`。
 
 联系方式
 

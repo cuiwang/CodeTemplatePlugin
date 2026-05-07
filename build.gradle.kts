@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.cuiwang"
-version = "1.0.2"
+version = "1.0.3"
 
 repositories {
     mavenCentral()
@@ -34,10 +34,10 @@ intellijPlatform {
         }
 
         changeNotes = """
-            <h3>1.0.2</h3>
+            <h3>1.0.3</h3>
             <ul>
-              <li>Prepared for Marketplace 1.0.2 release.</li>
-              <li>Minor fixes and UX tweaks.</li>
+              <li>Prepared for Marketplace 1.0.3 release.</li>
+              <li>Minor stability and UX improvements.</li>
             </ul>
         """.trimIndent()
     }
